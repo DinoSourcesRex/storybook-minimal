@@ -1,13 +1,24 @@
 {
   "extends": "../projects/squads/tsconfig.app.json",
   "compilerOptions": {
-    "types": ["node"]
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "../src/test.ts",
     "../src/**/*.spec.ts",
-    "../projects/**/*.spec.ts"
+    "../projects/**/*.spec.ts",
+    "../projects/**/*-spec.ts"
   ],
-  "include": ["../src/**/*", "../projects/**/*"],
-  "files": ["./typings.d.ts"]
+  "include": [
+    "../stories/**/*",
+    "../src/**/*",
+    "../projects/**/*",
+    "../projects/squads/src/**/*.d.ts"
+  ],
+  "files": [
+    "./typings.d.ts",
+    "../projects/squads/src/main.ts",
+    "../projects/squads/src/polyfills.ts"
+  ]
 }
